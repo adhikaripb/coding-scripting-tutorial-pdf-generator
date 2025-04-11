@@ -1,0 +1,18 @@
+Title: [EXAMPLE TITLE]
+[Prepared by YOUR CREDENTIAL HERE]
+Step 1: STEP1 TITLE HERE 
+- INSTRUCTION
+- INSTRUCTION
+
+Step 2: Initialize Git
+- Run:
+"""
+$ git init
+"""
+
+
+- Optional:
+"""
+$ touch README.md
+$ echo "*.pyc\n__pycache__/" > .gitignore
+"""
