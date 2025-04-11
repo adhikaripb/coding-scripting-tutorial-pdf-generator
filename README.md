@@ -1,10 +1,26 @@
+<p align="center">
+  <img src="assets/banner.png" width="80%" alt="Repo Banner"/>
+</p>
 # 📄 Text-to-Colored-PDF Converter
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue?logo=python)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Stars](https://img.shields.io/github/stars/adhikaripb/workflow-text-to-colored-pdf?style=social)
+![Last Commit](https://img.shields.io/github/last-commit/adhikaripb/workflow-text-to-colored-pdf)
 
 A stylish and minimal Python script that converts cleanly formatted `.txt` documentation into beautifully styled PDFs — ideal for sharing protocols, tutorials, coding steps, or structured instructions.
+
+---
+## 🧭 Table of Contents
+
+- [Features](#️features)
+- [Input Format Example](#input-format-example)
+- [How to Use](#how-to-use)
+- [Sample Output](#sample-output)
+- [Project Structure](#project-structure)
+- [Credits](#credits)
+- [License](#license)
 
 ---
 
@@ -32,3 +48,38 @@ Step 1: Create a Proper PyCharm Project
 """
 $ git init
 """
+```
+
+---
+
+## 🚀 How to Use
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/adhikaripb/workflow-text-to-colored-pdf.git
+cd workflow-text-to-colored-pdf
+```
+
+### 2. Install Required Package
+
+```bash
+pip install fpdf
+```
+
+### 3. Run the Script
+
+```bash
+python "Scripting or coding steps in text to colored PDF converter.py"
+```
+
+- You'll be prompted to provide a path to a `.txt` file.
+- A color-styled PDF will be generated in the same folder.
+
+---
+
+## 📷 Sample Output
+
+<p align="center">
+  <img src="samples/sample_output.png" alt="Sample Output Preview" width="100%" />
+</p>
