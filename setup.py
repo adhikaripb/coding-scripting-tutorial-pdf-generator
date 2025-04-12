@@ -1,16 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='txt2pdf_style',
+    name='tutorial-text2pdf-style',
     version='0.1.0',
     packages=find_packages(),
-    py_modules=['converter_script'],
     install_requires=[
         'fpdf',
     ],
     entry_points={
         'console_scripts': [
-            'txt2pdf-style=converter_script:main',
+            'txt2pdf-style=tutorial_text2pdf_style:main',
         ],
     },
     author='Prakash Babu Adhikari',
