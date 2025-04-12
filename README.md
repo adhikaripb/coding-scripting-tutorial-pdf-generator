@@ -1,3 +1,4 @@
+[![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen?style=for-the-badge)](https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator/generate)
 <p align="center">
   <img src="assets/banner.png" width="80%" alt="Repo Banner"/>
 </p>
