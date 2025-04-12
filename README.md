@@ -72,8 +72,10 @@ pip install fpdf
 
 ### 3. Run the Script
 
+Once installed (or after setup locally), you can run it from anywhere using:
+
 ```bash
-python "converter-script.py"
+tutorial-txt2pdf-style
 ```
 
 - You'll be prompted to provide a path to a `.txt` file.
