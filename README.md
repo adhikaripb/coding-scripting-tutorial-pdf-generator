@@ -86,5 +86,5 @@ tutorial-txt2pdf-style
 ## 📷 Sample Output
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/adhikaripb/coding-scripting-tutorial-pdf-generator/main/samples/sample_output.png" alt="Sample Output Preview" width="100%" />
+  <img src="https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator/raw/main/samples/sample_output.png" alt="Sample Output Preview" width="100%" />
 </p>
