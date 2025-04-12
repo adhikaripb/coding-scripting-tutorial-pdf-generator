@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='tutorial-text2pdf-style',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     install_requires=[
         'fpdf',
     ],
     entry_points={
         'console_scripts': [
-            'txt2pdf-style=tutorial_text2pdf_style:main',
+            'tutorial-txt2pdf-style = tutorial_text2pdf_style.__init__:main',
         ],
     },
     author='Prakash Babu Adhikari',

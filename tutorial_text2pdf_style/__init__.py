@@ -231,7 +231,10 @@ colors = [
 ]
 
 def main():
-    input_txt_path = input("Enter the full path to your input .txt file: ").strip()
+    if len(sys.argv) > 1:
+        input_txt_path = sys.argv[1]
+    else:
+        input_txt_path = input("Enter the full path to your input .txt file: ").strip()
     title_line, subtitle_line, parsed_steps = parse_custom_protocol(input_txt_path)
 
     pdf = FixedStyledScriptPDF()
