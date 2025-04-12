@@ -1,0 +1,2 @@
+[console_scripts]
+tutorial-txt2pdf-style = tutorial_text2pdf_style.__init__:main

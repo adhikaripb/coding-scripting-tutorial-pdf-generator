@@ -1,0 +1,10 @@
+README.md
+setup.py
+tutorial_text2pdf_style/__init__.py
+tutorial_text2pdf_style/__main__.py
+tutorial_text2pdf_style.egg-info/PKG-INFO
+tutorial_text2pdf_style.egg-info/SOURCES.txt
+tutorial_text2pdf_style.egg-info/dependency_links.txt
+tutorial_text2pdf_style.egg-info/entry_points.txt
+tutorial_text2pdf_style.egg-info/requires.txt
+tutorial_text2pdf_style.egg-info/top_level.txt

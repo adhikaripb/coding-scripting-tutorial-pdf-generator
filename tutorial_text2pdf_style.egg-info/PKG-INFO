@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: tutorial-text2pdf-style
+Version: 0.1.1
+Summary: Convert cleanly formatted .txt documentation into color-styled PDF files.
+Home-page: https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator
+Author: Prakash Babu Adhikari
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
 [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen?style=for-the-badge)](https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator/generate)
 <p align="center">
   <img src="assets/banner.png" width="80%" alt="Repo Banner"/>
@@ -86,5 +99,5 @@ tutorial-txt2pdf-style
 ## 📷 Sample Output
 
 <p align="center">
-  <img src="tutorial_text2pdf_style/sample_output.png" alt="Sample Output Preview" width="100%" />
+  <img src="https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator/raw/main/samples/sample_output.png" alt="Sample Output Preview" width="100%" />
 </p>
