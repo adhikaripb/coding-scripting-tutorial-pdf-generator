@@ -208,7 +208,7 @@ class FixedStyledScriptPDF(FPDF):
         return lines
 
     def write_colored_tokens(self, line):
-        tokens = re.split(r'(\s+)', line)
+        tokens = re.findall(r'\s+|\$[^\s]+|https?:\/\/\S+|[^\s"\']+|["\']', line)
         for token in tokens:
             if token.startswith("$"):
                 self.set_text_color(0, 255, 0)
