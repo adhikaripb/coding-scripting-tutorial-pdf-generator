@@ -61,7 +61,9 @@ git clone https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator.
 cd coding-scripting-tutorial-pdf-generator
 ```
 
-### 2. Install Required Package
+### 2. [Optional] Install Required Package
+
+The script auto-checks and installs prerequisite modules. However, if you'd like to do it manuyally,
 
 ```bash
 pip install fpdf
