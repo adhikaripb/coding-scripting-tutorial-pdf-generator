@@ -72,7 +72,7 @@ pip install fpdf
 ### 3. Run the Script
 
 ```bash
-python "Scripting or coding steps in text to colored PDF converter.py"
+python "converter-script.py"
 ```
 
 - You'll be prompted to provide a path to a `.txt` file.
