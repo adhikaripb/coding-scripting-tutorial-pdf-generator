@@ -1,6 +1,71 @@
-from fpdf import FPDF
-import re
+import sys
+import subprocess
 import os
+import re
+
+def upgrade_pip():
+    try:
+        print("🔄 Checking for pip updates...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+    except Exception as e:
+        print(f"⚠️ Failed to upgrade pip: {e}")
+
+def install_or_update(package):
+    builtins = {'os', 'sys', 'time', 're', 'datetime', 'math', 'random', 'subprocess', 'threading', 'concurrent', 'json', 'shutil', 'io', 'importlib', 'types', 'builtins'}
+    if package in builtins:
+        print(f"⏩ Skipping built-in module: {package}")
+        return
+
+    try:
+        __import__(package)
+        print(f"🔍 Checking for updates: {package}")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", package])
+    except ImportError:
+        print(f"📦 Installing missing package: {package}")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+def get_all_imports_recursively(start_file):
+    visited_files = set()
+    all_imports = set()
+    builtins = {'os', 'sys', 'time', 're', 'datetime', 'math', 'random', 'subprocess',
+                'threading', 'concurrent', 'json', 'shutil', 'io', 'importlib', 'types', 'builtins'}
+
+    def extract_imports(file_path):
+        if not os.path.exists(file_path) or file_path in visited_files:
+            return
+        visited_files.add(file_path)
+        with open(file_path, "r") as f:
+            for line in f:
+                match = re.match(r'^\s*(import|from)\s+([\w\.]+)', line)
+                if match:
+                    mod = match.group(2).split('.')[0]
+                    if mod not in builtins:
+                        all_imports.add(mod)
+
+    # Add main file
+    extract_imports(start_file)
+
+    # Parse additional script paths in the current file
+    with open(start_file, "r") as f:
+        content = f.read()
+        paths = re.findall(r'["\'](.*?/scripts/.*?\.py)["\']', content)
+        for path in paths:
+            path = os.path.abspath(path)
+            extract_imports(path)
+
+    return list(all_imports)
+
+# Dynamically parse this script or set another script path
+current_script_path = __file__
+required_modules = get_all_imports_recursively(current_script_path)
+
+upgrade_pip()
+
+for module in required_modules:
+    install_or_update(module)
+    print(f"All necessary modules are the latest release.\n")
+
+from fpdf import FPDF
 from datetime import datetime
 
 def improved_clean_text_for_pdf(text):
