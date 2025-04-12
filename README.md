@@ -57,8 +57,8 @@ $ git init
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/adhikaripb/workflow-text-to-colored-pdf.git
-cd workflow-text-to-colored-pdf
+git clone https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator.git
+cd coding-scripting-tutorial-pdf-generator
 ```
 
 ### 2. Install Required Package
