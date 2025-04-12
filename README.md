@@ -61,7 +61,9 @@ git clone https://github.com/adhikaripb/coding-scripting-tutorial-pdf-generator.
 cd coding-scripting-tutorial-pdf-generator
 ```
 
-### 2. Install Required Package
+### 2. [Optional] Install Required Package
+
+The script auto-checks and installs prerequisite modules. However, if you'd like to do it manuyally,
 
 ```bash
 pip install fpdf
@@ -70,7 +72,7 @@ pip install fpdf
 ### 3. Run the Script
 
 ```bash
-python "Scripting or coding steps in text to colored PDF converter.py"
+python "converter-script.py"
 ```
 
 - You'll be prompted to provide a path to a `.txt` file.
