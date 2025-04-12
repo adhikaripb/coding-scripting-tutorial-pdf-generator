@@ -230,22 +230,24 @@ colors = [
     (0, 102, 102), (128, 0, 0)
 ]
 
-# Prompt the user to input the path to the .txt file
-input_txt_path = input("Enter the full path to your input .txt file: ").strip()
-title_line, subtitle_line, parsed_steps = parse_custom_protocol(input_txt_path)
+def main():
+    input_txt_path = input("Enter the full path to your input .txt file: ").strip()
+    title_line, subtitle_line, parsed_steps = parse_custom_protocol(input_txt_path)
 
-# Generate the new fixed version of the PDF
-pdf = FixedStyledScriptPDF()
-pdf.document_title = title_line.replace("Title: ", "").strip()
-pdf.document_subtitle = subtitle_line.strip()
-pdf.set_left_margin(20)
-pdf.set_right_margin(20)
-pdf.add_page()
+    pdf = FixedStyledScriptPDF()
+    pdf.document_title = title_line.replace("Title: ", "").strip()
+    pdf.document_subtitle = subtitle_line.strip()
+    pdf.set_left_margin(20)
+    pdf.set_right_margin(20)
+    pdf.add_page()
 
-for i, (title, substeps) in enumerate(parsed_steps):
-    color = colors[i % len(colors)]
-    pdf.add_step(title, substeps, color=color)
+    for i, (title, substeps) in enumerate(parsed_steps):
+        color = colors[i % len(colors)]
+        pdf.add_step(title, substeps, color=color)
 
-output_dir = os.path.dirname(input_txt_path)
-fixed_pdf_path = os.path.join(output_dir, f'{pdf.document_title}.pdf')
-pdf.output(fixed_pdf_path)
+    output_dir = os.path.dirname(input_txt_path)
+    fixed_pdf_path = os.path.join(output_dir, f'{pdf.document_title}.pdf')
+    pdf.output(fixed_pdf_path)
+
+if __name__ == "__main__":
+    main()
